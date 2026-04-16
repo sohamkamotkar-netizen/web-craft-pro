@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dgriulj - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: sans-serif; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; min-height: 100vh; }
+    @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+  <div class="w-full h-full overflow-y-auto overflow-x-hidden"><div class="font-sans min-h-full bg-white"><nav class="bg-[hsl(215,70%,50%)] text-white px-8 py-4 flex items-center justify-between"><span class="font-bold text-xl">dgriulj</span><div class="flex gap-6 text-sm"><span class=" cursor-pointer hover:opacity-80 transition-opacity">Home</span><span class=" cursor-pointer hover:opacity-80 transition-opacity">about us</span><span class=" cursor-pointer hover:opacity-80 transition-opacity">services</span></div></nav><div class="bg-[hsl(215,70%,95%)] px-8 py-20 text-center"><h1 class="text-4xl font-bold text-[hsl(215,70%,30%)]">vhgkjk.,</h1><p class="text-[hsl(215,30%,45%)] mt-3 text-lg max-w-xl mx-auto">okoj</p><button class="mt-6 bg-[hsl(215,70%,50%)] text-white px-8 py-3 rounded-lg font-semibold">book</button></div><div class="px-8 py-16"><h2 class="text-2xl font-bold text-center mb-4"></h2><p class="text-center text-[hsl(215,15%,50%)] max-w-2xl mx-auto"></p></div><div class="bg-muted/30 px-8 py-16"><h2 class="text-2xl font-bold text-center mb-8"></h2><div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"></div></div><footer class="bg-[hsl(215,70%,15%)] text-white px-8 py-10 text-center"><h2 class="text-xl font-bold mb-2">fdrgyuhijlok;</h2><p class="opacity-60">rdyuiykfjgh • 45678798</p><p class="opacity-40 text-xs mt-6">© dgriulj 2026</p></footer></div></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navMap = [{"name":"Home","filename":"index.html"},{"name":"about us","filename":"about us.html"},{"name":"services","filename":"services.html"}];
+      const spans = document.querySelectorAll('span.cursor-pointer');
+      spans.forEach(span => {
+        const text = span.innerText.trim();
+        const target = navMap.find(m => m.name === text);
+        if (target) {
+          span.onclick = (e) => {
+            e.preventDefault();
+            window.location.href = target.filename;
+          };
+        }
+      });
+    });
+  </script>
+</body>
+</html>
